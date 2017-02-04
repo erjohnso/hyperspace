@@ -4,10 +4,9 @@ After=network.target
 
 [Service]
 PIDFile=/run/hyperspace.pid
-User=hyperspace
-Group=hyperspace
-WorkingDirectory=/home/hyperspace/hyperspace
-ExecStart=/home/hyperspace/hyperspace/server/server
+User=erjohnso
+WorkingDirectory=/srv/hyperspace
+ExecStart=/srv/hyperspace/server/server
 
 [Install]
 WantedBy=multi-user.target

@@ -15,27 +15,16 @@ A real-time multiplayer space shooter.
 Add to bottom of http block:
 
 ```conf
-include /home/hyperspace/hyperspace/etc/nginx.conf;
+include /srv/hyperspace/etc/nginx.conf;
 ```
 
 Add systemd service:
 
 ```sh
-sudo ln -s /home/hyperspace/hyperspace/etc/hyperspace.service /etc/systemd/system/
+sudo ln -s /srv/hyperspace/etc/hyperspace.service /etc/systemd/system/
 sudo systemctl start hyperspace
 ```
 
-### Add ability to restart server:
-
-```sh
-sudo EDITOR=emacs visudo
-```
-
-```
-hyperspace ALL=(ALL) NOPASSWD: /home/hyperspace/hyperspace/bin/start
-hyperspace ALL=(ALL) NOPASSWD: /home/hyperspace/hyperspace/bin/stop
-hyperspace ALL=(ALL) NOPASSWD: /home/hyperspace/hyperspace/bin/restart
-```
 
 ### Add dependencies
 
