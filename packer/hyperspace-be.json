@@ -1,0 +1,31 @@
+{
+    "builders": [
+        {
+            "type": "googlecompute",
+            "project_id": "modern-girder-157718",
+            "account_file": "/home/erjohnso/hashicorp-videos.json",
+            "zone": "us-central1-f",
+            "source_image": "ubuntu-1604-xenial-v20170202",
+            "image_name": "hyperspace-be-{{timestamp}}",
+            "ssh_pty": "true",
+            "ssh_username": "ubuntu"
+        }
+    ],
+    "provisioners": [
+        {
+            "type": "shell",
+            "inline": [
+                "sudo apt-get update -y",
+                "sudo apt-get install -y git vim build-essential"
+            ]
+        },
+        {
+            "type": "shell",
+            "script": "scripts/base.sh"
+        },
+        {
+            "type": "shell",
+            "script": "scripts/hyperspace-be.sh"
+        }
+    ]
+}
