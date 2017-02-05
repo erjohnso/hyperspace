@@ -26,3 +26,6 @@ _testmain.go
 server/server
 .DS_Store
 tmp/*
+
+terraform.tfstate
+terraform.tfstate.backup
