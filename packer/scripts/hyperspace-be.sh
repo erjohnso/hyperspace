@@ -26,6 +26,5 @@ sudo touch /var/log/hyperspace.log
 sudo chmod 755 /var/log/hyperspace.log
 
 # set up hyperspace with systemd
-sudo ln -s /srv/hyperspace/hyperspace/etc/hyperspace.service.be /etc/systemd/system/multi-user.target.wants/
-sudo systemctl enable hyperspace.service
+sudo cp /srv/hyperspace/hyperspace/etc/hyperspace.service.be /etc/systemd/system/multi-user.target.wants/hyperspace.service
 sudo systemctl start hyperspace.service
