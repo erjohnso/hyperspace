@@ -15,8 +15,8 @@
         {
             "type": "shell",
             "inline": [
-                "sudo apt-get update -y",
-                "sudo apt-get install -y git vim build-essential"
+                "sudo DEBIAN_FRONTEND=noninteractive apt-get update -y -qq",
+                "sudo DEBIAN_FRONTEND=noninteractive apt-get install -y -qq git vim build-essential"
             ]
         },
         {

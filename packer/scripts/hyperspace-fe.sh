@@ -16,7 +16,5 @@ sudo -u hyperspace sed -i '28,33d' etc/nginx.conf
 # install nginx
 sudo apt-get install -y nginx
 sudo rm /etc/nginx/sites-enabled/default
-sudo cp /srv/hyperspace/hyperspace/etc/nginx.conf /etc/nginx/sites-enabled/default
-sudo ln -s /srv/hyperspace/hyperspace/etc/hyperspace.service /etc/systemd/system/
-
-#sudo service nginx restart
+sudo ln -s /srv/hyperspace/hyperspace/etc/nginx.conf /etc/nginx/sites-enabled/default
+sudo ln -s /srv/hyperspace/hyperspace/etc/hyperspace.service /etc/systemd/system/multi-user.target.wants/
