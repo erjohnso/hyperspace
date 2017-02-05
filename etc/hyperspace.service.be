@@ -1,0 +1,12 @@
+[Unit]
+Description=A real-time multiplayer space shooter
+After=network.target
+
+[Service]
+PIDFile=/run/hyperspace.pid
+User=hyperspace
+WorkingDirectory=/srv/hyperspace/hyperspace
+ExecStart=/srv/hyperspace/hyperspace/server/server
+
+[Install]
+WantedBy=multi-user.target

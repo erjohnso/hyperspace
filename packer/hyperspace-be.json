@@ -6,7 +6,7 @@
             "account_file": "/home/erjohnso/hashicorp-videos.json",
             "zone": "us-central1-f",
             "source_image": "ubuntu-1604-xenial-v20170202",
-            "image_name": "hyperspace-be-{{timestamp}}",
+            "image_name": "hyperspace-be",
             "ssh_pty": "true",
             "ssh_username": "ubuntu"
         }

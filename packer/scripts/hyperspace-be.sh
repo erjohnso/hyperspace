@@ -24,3 +24,8 @@ sudo killall server
 # make sure hyperspace starts on reboot
 sudo touch /var/log/hyperspace.log
 sudo chmod 755 /var/log/hyperspace.log
+
+# set up hyperspace with systemd
+sudo ln -s /srv/hyperspace/hyperspace/etc/hyperspace.service.be /etc/systemd/system/multi-user.target.wants/
+sudo systemctl enable hyperspace.service
+sudo systemctl start hyperspace.service
