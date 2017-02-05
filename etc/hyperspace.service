@@ -1,6 +1,6 @@
 [Unit]
 Description=A real-time multiplayer space shooter
-After=network.target
+After=network.target nginx.service
 
 [Service]
 PIDFile=/run/hyperspace.pid
