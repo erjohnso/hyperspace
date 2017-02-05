@@ -25,6 +25,8 @@ sudo killall server
 sudo touch /var/log/hyperspace.log
 sudo chmod 755 /var/log/hyperspace.log
 
-# set up hyperspace with systemd
-sudo cp /srv/hyperspace/hyperspace/etc/hyperspace.service.be /etc/systemd/system/multi-user.target.wants/hyperspace.service
-sudo systemctl start hyperspace.service
+# install nginx
+sudo apt-get install -y nginx
+sudo rm /etc/nginx/sites-enabled/default
+sudo ln -s /srv/hyperspace/hyperspace/etc/nginx.conf /etc/nginx/sites-enabled/default
+sudo ln -s /srv/hyperspace/hyperspace/etc/hyperspace.service /etc/systemd/system/multi-user.target.wants/
