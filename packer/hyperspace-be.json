@@ -2,13 +2,13 @@
     "builders": [
         {
             "type": "googlecompute",
-            "project_id": "modern-girder-157718",
-            "account_file": "/home/erjohnso/hashicorp-videos.json",
-            "zone": "us-central1-f",
+            "project_id": "rbuilder",
+            "zone": "europe-west-1-b",
             "source_image": "ubuntu-1604-xenial-v20170202",
             "image_name": "hyperspace-be",
             "ssh_pty": "true",
-            "ssh_username": "ubuntu"
+            "ssh_username": "ubuntu",
+            "machine_type" : "f1-micro"
         }
     ],
     "provisioners": [
