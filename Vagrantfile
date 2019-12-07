@@ -36,7 +36,7 @@ Vagrant.configure("2") do |config|
     # Override provider defaults
     google.name = "hyperspace-dev"
     google.image = "ubuntu-1604-xenial-v20170125"
-    google.machine_type = "g1-small"
+    google.machine_type = "f1-micro"
     google.zone = "us-central1-f"
     google.tags = ['hyperspace', 'dev', 'http-server']
     override.ssh.username = $LOCAL_USER
